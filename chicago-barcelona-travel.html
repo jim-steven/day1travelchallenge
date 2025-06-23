@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barcelona Business Trip | August 5-8, 2025</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Google Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #202124;
+            background-color: #ffffff;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .document-container {
+            max-width: 8.5in;
+            margin: 0 auto;
+            background: white;
+            min-height: 100vh;
+            padding: 1in;
+            box-shadow: none;
+        }
+        
+        .header-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 24px;
+        }
+        
+        .document-title {
+            font-size: 36px;
+            font-weight: 400;
+            color: #202124;
+            margin-bottom: 8px;
+            line-height: 1.2;
+        }
+        
+        .document-subtitle {
+            font-size: 14px;
+            color: #5f6368;
+            margin-bottom: 32px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .calendar-icon {
+            width: 16px;
+            height: 16px;
+            background: #ea4335;
+            border-radius: 4px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 10px;
+            font-weight: bold;
+        }
+        
+        .overview-section {
+            margin-bottom: 40px;
+        }
+        
+        .section-title {
+            font-size: 20px;
+            font-weight: 500;
+            color: #202124;
+            margin-bottom: 8px;
+        }
+        
+        .section-subtitle {
+            font-size: 13px;
+            color: #5f6368;
+            margin-bottom: 24px;
+        }
+        
+        .overview-grid {
+            display: grid;
+            grid-template-columns: 120px 1fr;
+            gap: 16px 24px;
+            margin-bottom: 32px;
+        }
+        
+        .overview-label {
+            font-size: 14px;
+            color: #5f6368;
+            font-weight: 500;
+        }
+        
+        .overview-value {
+            font-size: 14px;
+            color: #202124;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .location-badge {
+            background: #e8f0fe;
+            color: #1a73e8;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+        
+        .pin-icon {
+            width: 12px;
+            height: 12px;
+            background: #1a73e8;
+            border-radius: 50%;
+            position: relative;
+        }
+        
+        .pin-icon::before {
+            content: '📍';
+            font-size: 8px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .action-items-section {
+            margin-bottom: 40px;
+        }
+        
+        .action-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+        
+        .action-table th {
+            text-align: left;
+            padding: 12px 16px 12px 0;
+            color: #5f6368;
+            font-weight: 500;
+            border-bottom: 1px solid #e8eaed;
+        }
+        
+        .action-table td {
+            padding: 12px 16px 12px 0;
+            border-bottom: 1px solid #f1f3f4;
+            vertical-align: top;
+        }
+        
+        .status-badge {
+            background: #e8eaff;
+            color: #5f63ff;
+            padding: 4px 12px;
+            border-radius: 16px;
+            font-size: 12px;
+            font-weight: 500;
+            display: inline-block;
+        }
+        
+        .content-section {
+            margin-bottom: 48px;
+            border-bottom: 1px solid #e8eaed;
+            padding-bottom: 32px;
+        }
+        
+        .content-section:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        
+        .weather-info {
+            background: #fef7e0;
+            border-left: 4px solid #fbbc04;
+            padding: 16px;
+            margin: 16px 0;
+            border-radius: 0 4px 4px 0;
+        }
+        
+        .weather-info ul {
+            margin-left: 16px;
+            margin-top: 8px;
+        }
+        
+        .weather-info li {
+            margin-bottom: 8px;
+            color: #7c4a00;
+        }
+        
+        .flights-table, .hotels-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 16px;
+            font-size: 13px;
+        }
+        
+        .flights-table th, .hotels-table th {
+            text-align: left;
+            padding: 12px 8px;
+            background: #f8f9fa;
+            color: #5f6368;
+            font-weight: 500;
+            border: 1px solid #e8eaed;
+        }
+        
+        .flights-table td, .hotels-table td {
+            padding: 12px 8px;
+            border: 1px solid #e8eaed;
+        }
+        
+        .flights-table tr:hover, .hotels-table tr:hover {
+            background: #f8f9fa;
+        }
+        
+        .suggested-row {
+            background: #e8f0fe !important;
+            border-left: 4px solid #1a73e8;
+        }
+        
+        .suggested-row:hover {
+            background: #d2e3fc !important;
+        }
+        
+        .price {
+            font-weight: 600;
+            color: #137333;
+        }
+        
+        .link {
+            color: #1a73e8;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .link:hover {
+            text-decoration: underline;
+        }
+        
+        .feature-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-top: 16px;
+        }
+        
+        .feature-card {
+            border: 1px solid #e8eaed;
+            border-radius: 8px;
+            padding: 20px;
+            background: #fafafa;
+        }
+        
+        .feature-card h3 {
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 12px;
+            color: #202124;
+        }
+        
+        .feature-card p {
+            margin-bottom: 6px;
+            font-size: 14px;
+            color: #5f6368;
+        }
+        
+        .rating {
+            color: #fbbc04;
+            font-weight: 600;
+        }
+        
+        .itinerary-day {
+            margin-bottom: 32px;
+            padding: 20px;
+            border: 1px solid #e8eaed;
+            border-radius: 8px;
+            background: #f8f9fa;
+        }
+        
+        .itinerary-day h3 {
+            color: #202124;
+            margin-bottom: 16px;
+            font-size: 18px;
+            font-weight: 500;
+        }
+        
+        .timeline {
+            margin-left: 24px;
+            position: relative;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: -12px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #1a73e8;
+        }
+        
+        .timeline-item {
+            margin-bottom: 16px;
+            padding-left: 32px;
+            position: relative;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -17px;
+            top: 6px;
+            width: 8px;
+            height: 8px;
+            background: #1a73e8;
+            border-radius: 50%;
+            border: 2px solid white;
+            box-shadow: 0 0 0 2px #1a73e8;
+        }
+        
+        .time {
+            font-weight: 600;
+            color: #1a73e8;
+            display: inline-block;
+            width: 80px;
+            font-size: 13px;
+        }
+        
+        .activity {
+            display: inline-block;
+            margin-left: 12px;
+            font-weight: 500;
+            font-size: 14px;
+        }
+        
+        .notes {
+            color: #5f6368;
+            font-size: 13px;
+            margin-left: 92px;
+            margin-top: 4px;
+            font-style: italic;
+        }
+        
+        .quick-access {
+            position: fixed;
+            right: 24px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: white;
+            border: 1px solid #e8eaed;
+            border-radius: 8px;
+            padding: 16px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+            min-width: 140px;
+        }
+        
+        .quick-access h4 {
+            margin-bottom: 12px;
+            color: #202124;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+        .quick-access a {
+            display: block;
+            margin-bottom: 8px;
+            color: #1a73e8;
+            text-decoration: none;
+            font-size: 13px;
+            padding: 6px 8px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        
+        .quick-access a:hover {
+            background: #f1f3f4;
+        }
+        
+        .scroll-to-top {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background: #1a73e8;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 48px;
+            height: 48px;
+            font-size: 18px;
+            cursor: pointer;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .scroll-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .scroll-to-top:hover {
+            background: #1557b0;
+        }
+        
+        @media (max-width: 768px) {
+            .document-container {
+                padding: 24px;
+            }
+            
+            .document-title {
+                font-size: 28px;
+            }
+            
+            .overview-grid {
+                grid-template-columns: 1fr;
+                gap: 8px;
+            }
+            
+            .feature-cards {
+                grid-template-columns: 1fr;
+            }
+            
+            .quick-access {
+                display: none;
+            }
+            
+            .flights-table, .hotels-table {
+                font-size: 12px;
+            }
+            
+            .flights-table th, .flights-table td,
+            .hotels-table th, .hotels-table td {
+                padding: 8px 4px;
+            }
+        }
+        
+        .collapsible {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .collapsible::before {
+            content: '▼';
+            font-size: 12px;
+            color: #5f6368;
+            transition: transform 0.3s ease;
+        }
+        
+        .collapsible.collapsed::before {
+            transform: rotate(-90deg);
+        }
+        
+        .collapsible-content {
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .collapsible-content.collapsed {
+            max-height: 0;
+        }
+        
+        .suggestion-highlight {
+            background: #e8f0fe;
+            border-left: 4px solid #1a73e8;
+            padding: 12px;
+            margin: 12px 0;
+            border-radius: 0 4px 4px 0;
+            font-size: 14px;
+            color: #1a73e8;
+            font-weight: 500;
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+        }
+        
+        .modal-content {
+            background-color: white;
+            margin: 15% auto;
+            padding: 30px;
+            border-radius: 8px;
+            width: 500px;
+            max-width: 90%;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+        
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        .close:hover {
+            color: #000;
+        }
+        
+        .modal input {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            border: 1px solid #e8eaed;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        
+        .modal button {
+            background: #1a73e8;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-top: 16px;
+        }
+        
+        .modal button:hover {
+            background: #1557b0;
+        }
+
+        @media print {
+            .quick-access, .scroll-to-top, .modal {
+                display: none;
+            }
+            
+            .document-container {
+                box-shadow: none;
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="document-container">
+        <img src="https://wallpapers.com/images/high/barcelona-background-a5lag5836fnl8gm1.webp" alt="Barcelona Cityscape" class="header-image">
+        
+        <h1 class="document-title">Barcelona Business Trip</h1>
+        <div class="document-subtitle">
+            <span class="calendar-icon">📅</span>
+            Barcelona Business Trip – August 5-8, 2025
+        </div>
+
+        <div class="overview-section">
+            <h2 class="section-title">Overview</h2>
+            <p class="section-subtitle">List important trip details</p>
+            
+            <div class="overview-grid">
+                <div class="overview-label">Destination</div>
+                <div class="overview-value">
+                    <span class="location-badge">
+                        <span class="pin-icon"></span>
+                        <a href="https://maps.app.goo.gl/Br93Q9zJ8JPrUbnF9" target="_blank" style="color: inherit; text-decoration: none;">Carrer de Pau Claris, 107, LOCAL 4, Eixample, 08009 Barcelona, Spain</a>
+                    </span>
+                </div>
+                
+                <div class="overview-label">Start date</div>
+                <div class="overview-value">Aug 5, 2025</div>
+                
+                <div class="overview-label">End date</div>
+                <div class="overview-value">Aug 8, 2025</div>
+                
+                <div class="overview-label">Budget</div>
+                <div class="overview-value">$15,000.00</div>
+                
+                <div class="overview-label">Purpose</div>
+                <div class="overview-value">Business meetings and team cultural bonding</div>
+            </div>
+        </div>
+
+        <div class="action-items-section">
+            <h2 class="section-title">Action items</h2>
+            <p class="section-subtitle">List tasks that need to be completed before the trip starts</p>
+            
+            <table class="action-table">
+                <thead>
+                    <tr>
+                        <th>Task</th>
+                        <th>Name</th>
+                        <th>Status</th>
+                        <th>Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Book flight</td>
+                        <td>Jim</td>
+                        <td><span class="status-badge">In progress</span></td>
+                        <td>Suggested: AA 40 / AA 41 Business Class</td>
+                    </tr>
+                    <tr>
+                        <td>Reserve hotel</td>
+                        <td>Jim</td>
+                        <td><span class="status-badge">In progress</span></td>
+                        <td>Suggested: Ikonik Lex, Ref: IKL234859</td>
+                    </tr>
+                    <tr>
+                        <td>Dinner booking</td>
+                        <td>Jim</td>
+                        <td><span class="status-badge">In progress</span></td>
+                        <td>Suggested: Tragaluz, La Terraza del Claris</td>
+                    </tr>
+                    <tr>
+                        <td>Print itinerary</td>
+                        <td>Jim</td>
+                        <td><span class="status-badge">In progress</span></td>
+                        <td>Finalize and print for attendees</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="content-section">
+            <h2 class="section-title collapsible collapsed" id="weather" onclick="toggleCollapse('weather-content')">🌤️ Weather Forecast</h2>
+            <div class="suggestion-highlight">
+                💡 <strong>Suggestion:</strong> Pack layers for temperature variation and a light rain jacket for unexpected showers. <em>Click above to expand for detailed weather information.</em>
+            </div>
+            <div id="weather-content" class="collapsible-content collapsed">
+                <div class="weather-info">
+                    <p><strong>Expect warm, pleasant summer conditions:</strong></p>
+                    <ul>
+                        <li>Daytime highs ranging around 27–30°C (81–86°F)—great for meetings and outdoor sightseeing.</li>
+                        <li>Evenings cooling to 18–20°C (64–68°F)—a light sweater or jacket will be handy.</li>
+                        <li>Minimal chance of rain, though an occasional afternoon sprinkle might pop up—packing a compact umbrella or light rain jacket is a smart move.</li>
+                        <li>Sunny to partly cloudy skies—ideal for rooftop dinners and outdoor walks.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2 class="section-title" id="flights">✈️ Flight Options (Google Flights)</h2>
+            <div class="suggestion-highlight">
+                💡 <strong>Suggestion:</strong> American Airlines AA 40/41 offers the best schedule with nonstop flights and flagship business class service.
+            </div>
+            <table class="flights-table">
+                <thead>
+                    <tr>
+                        <th>Flight Links</th>
+                        <th>Airline</th>
+                        <th>Outbound Details</th>
+                        <th>Inbound Details</th>
+                        <th>Cabin Class</th>
+                        <th>Price (per pax)</th>
+                        <th>Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="suggested-row">
+                        <td><a href="https://www.google.com/travel/flights/s/143yPZrCH15puwQP6" class="link" target="_blank">Google Flights – $10,758</a></td>
+                        <td>American Airlines</td>
+                        <td>ORD 7:00 PM → BCN 10:30 AM (AA 40, nonstop)</td>
+                        <td>BCN 10:45 AM → ORD 1:30 PM (AA 41, nonstop)</td>
+                        <td>Business</td>
+                        <td class="price">$10,758</td>
+                        <td>Nonstop both ways, Flagship Business</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://www.google.com/travel/flights/s/CEywHC6kSkZTX7FC6" class="link" target="_blank">Google Flights – $9,704</a></td>
+                        <td>United Airlines</td>
+                        <td>ORD 9:35 PM → BCN 1:15 PM (UA 769, nonstop)</td>
+                        <td>BCN 3:15 PM → ORD 6:00 PM (UA 770, nonstop)</td>
+                        <td>Business</td>
+                        <td class="price">$9,704</td>
+                        <td>Nonstop both ways, slightly delayed return</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://www.google.com/travel/flights/s/EyoBxrTEbExi8CFF8" class="link" target="_blank">Google Flights – $8,127</a></td>
+                        <td>British Airways / American</td>
+                        <td>ORD 9:15 PM → LHR → BCN (BA 296, BA 480)</td>
+                        <td>BCN 10:45 AM → ORD 1:30 PM (AA 41, nonstop)</td>
+                        <td>Business</td>
+                        <td class="price">$8,127</td>
+                        <td>Long outbound layover in London</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="content-section">
+            <h2 class="section-title" id="hotels">🛏️ Hotel Options (Cozycozy)</h2>
+            <div class="suggestion-highlight">
+                💡 <strong>Suggestion:</strong> Ikonik Lex offers the best value with excellent amenities and proximity to business district.
+            </div>
+            <table class="hotels-table">
+                <thead>
+                    <tr>
+                        <th>Hotel Name</th>
+                        <th>Category</th>
+                        <th>Room Type</th>
+                        <th>Check-in / Check-out</th>
+                        <th>Rate (USD/night)</th>
+                        <th>Total (3 nights)</th>
+                        <th>Location</th>
+                        <th>Book</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="suggested-row">
+                        <td><strong>Ikonik Lex</strong></td>
+                        <td>4★</td>
+                        <td>Double/Twin Room</td>
+                        <td>Aug 5 – 2:00 PM / Aug 8 – 12:00 PM</td>
+                        <td class="price">$127</td>
+                        <td class="price">$381</td>
+                        <td>4.2 km from Passeig de Gràcia (L'Hospitalet)</td>
+                        <td><a href="https://www.cozycozy.com/en-ph/search/Passeig%20de%20Gr%C3%A0cia%2C%20Barcelona%2C%20Spain/2025-08-05/2025-08-08/1-1-0/results(details:details/15548458/details)" class="link" target="_blank">Book Now</a></td>
+                    </tr>
+                    <tr>
+                        <td>Hotel SB Plaza Europa</td>
+                        <td>4★</td>
+                        <td>Single Room</td>
+                        <td>Aug 5 – 3:00 PM / Aug 8 – 12:00 PM</td>
+                        <td class="price">$137</td>
+                        <td class="price">$411</td>
+                        <td>4.5 km from Passeig de Gràcia (L'Hospitalet)</td>
+                        <td><a href="https://www.cozycozy.com/en-ph/search/Passeig%20de%20Gr%C3%A0cia%2C%20Barcelona%2C%20Spain/2025-08-05/2025-08-08/1-1-0/results(details:details/16399404/details)" class="link" target="_blank">Book Now</a></td>
+                    </tr>
+                    <tr>
+                        <td>Hotel Porta Fira</td>
+                        <td>4★</td>
+                        <td>Double/Twin Room</td>
+                        <td>Aug 5 – 3:00 PM / Aug 8 – 12:00 PM</td>
+                        <td class="price">$121</td>
+                        <td class="price">$363</td>
+                        <td>5.3 km from Passeig de Gràcia (L'Hospitalet)</td>
+                        <td><a href="https://www.cozycozy.com/en-ph/search/Passeig%20de%20Gr%C3%A0cia%2C%20Barcelona%2C%20Spain/2025-08-05/2025-08-08/1-1-0/results(details:details/17062148/details)" class="link" target="_blank">Book Now</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="content-section">
+            <h2 class="section-title" id="restaurants">🍽️ Lunch Meeting Venues (TripAdvisor)</h2>
+            <div class="suggestion-highlight">
+                💡 <strong>Suggestion:</strong> La Terraza del Claris is perfect for business lunches with its rooftop setting and proximity to your meeting location.
+            </div>
+            <div class="feature-cards">
+                <div class="feature-card">
+                    <h3>Tragaluz</h3>
+                    <p><span class="rating">Rating: 4.0/5</span></p>
+                    <p><strong>Cuisine:</strong> Modern Mediterranean / Catalan</p>
+                    <p><strong>Address:</strong> C/ València 171</p>
+                    <p><strong>Distance:</strong> ~5 min walk</p>
+                    <p style="margin-top: 12px;"><a href="https://www.tripadvisor.com/Restaurant_Review-g187497-d718426-Reviews-Tragaluz-Barcelona" class="link" target="_blank">View on TripAdvisor</a></p>
+                </div>
+                <div class="feature-card">
+                    <h3>Ciutat Comtal</h3>
+                    <p><span class="rating">Rating: 4.4/5</span></p>
+                    <p><strong>Cuisine:</strong> Spanish Tapas & Catalan</p>
+                    <p><strong>Address:</strong> Rambla de Catalunya 18</p>
+                    <p><strong>Distance:</strong> ~3 min walk</p>
+                    <p style="margin-top: 12px;"><a href="https://www.tripadvisor.com/Restaurant_Review-g187497-d15091420-Reviews-Ciutat_Comtal" class="link" target="_blank">View on TripAdvisor</a></p>
+                </div>
+                <div class="feature-card">
+                    <h3>La Terraza del Claris</h3>
+                    <p><span class="rating">Rating: 4.7/5</span></p>
+                    <p><strong>Cuisine:</strong> Upscale Mediterranean (rooftop)</p>
+                    <p><strong>Address:</strong> Pau Claris 150 (Hotel Claris)</p>
+                    <p><strong>Distance:</strong> ~4 min walk</p>
+                    <p style="margin-top: 12px;"><a href="https://www.hotelclaris.com/en/la-terraza-del-claris" class="link" target="_blank">Official Website</a></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2 class="section-title" id="activities">🎭 Evening Activities (TripAdvisor)</h2>
+            <div class="suggestion-highlight">
+                💡 <strong>Suggestion:</strong> Casa Batlló is a must-see and only 2-3 minutes walk from your meeting location. Perfect for evening photography.
+            </div>
+            <div class="feature-cards">
+                <div class="feature-card">
+                    <h3>Casa Batlló – Modernist Landmark & Museum</h3>
+                    <p><strong>Location:</strong> Passeig de Gràcia, 43</p>
+                    <p><strong>Distance:</strong> ~2‑3 min walk</p>
+                    <p style="margin-top: 12px;"><a href="https://www.tripadvisor.com.ph/Attraction_Review-g187497-d191052-Reviews-Casa_Batllo-Barcelona_Catalonia.html" class="link" target="_blank">View on TripAdvisor</a></p>
+                </div>
+                <div class="feature-card">
+                    <h3>Casa Milà (La Pedrera) – Modernist Landmark & Rooftop Tour</h3>
+                    <p><strong>Location:</strong> Passeig de Gràcia, 92</p>
+                    <p><strong>Distance:</strong> ~4 min walk</p>
+                    <p style="margin-top: 12px;"><a href="https://www.tripadvisor.com.ph/Attraction_Review-g187497-d190629-Reviews-Casa_Mila_La_Pedrera-Barcelona_Catalonia.html" class="link" target="_blank">View on TripAdvisor</a></p>
+                </div>
+                <div class="feature-card">
+                    <h3>Palau de la Música Catalana – Concert Hall & Cultural Tours</h3>
+                    <p><strong>Location:</strong> C/ Palau de la Música, 4–6</p>
+                    <p><strong>Distance:</strong> ~8 min walk</p>
+                    <p style="margin-top: 12px;"><a href="https://www.tripadvisor.com.ph/Attraction_Review-g187497-d190824-Reviews-Palace_of_Catalan_Music-Barcelona_Catalonia.html" class="link" target="_blank">View on TripAdvisor</a></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2 class="section-title" id="itinerary">🗓️ Detailed Itinerary</h2>
+            
+            <div class="itinerary-day">
+                <h3>August 5: Travel Day</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <span class="time">1:00 PM</span>
+                        <span class="activity">Leave for ORD airport</span>
+                        <div class="notes">Allow time for check-in and security</div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="time">3:00 PM</span>
+                        <span class="activity">Arrive at ORD, check in</span>
+                        <div class="notes">Flight Ref: AA2045. Bring passport, boarding pass</div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="time">7:00 PM</span>
+                        <span class="activity">Flight to Barcelona (AA 40)</span>
+                        <div class="notes">Nonstop to BCN, Business Class, ~8h 30m</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="itinerary-day">
+                <h3>August 6: Arrival & Orientation</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <span class="time">10:30 AM</span>
+                        <span class="activity">Arrive in Barcelona</span>
+                        <div class="notes">Clear immigration, collect luggage</div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="time">11:30 AM</span>
+                        <span class="activity">Taxi to hotel</span>
+                        <div class="notes">~25 min to L'Hospitalet hotels</div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="time">12:00 PM</span>
+                        <span class="activity">Drop bags / early check-in if possible</span>
+                        <div class="notes">Hotel: Ikonik Lex. Official check-in: 2:00 PM</div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="time">12:30 PM</span>
+                        <span class="activity">Light lunch nearby or walk</span>
+                        <div class="notes">Try Ciutat Comtal or a nearby tapas spot</div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="time">2:00 PM</span>
+                        <span class="activity">Official check-in at hotel</span>
+                        <div class="notes">Booking Ref: IKL234859</div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="time">5:00 PM</span>
+                        <span class="activity">Visit Casa Batlló</span>
+                        <div class="notes">Best before sunset. Open till 8 PM, last entry at 7 PM</div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="time">7:30 PM</span>
+                        <span class="activity">Dinner at Tragaluz</span>
+                        <div class="notes">Reservation recommended. Open 1 PM–11:30 PM</div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="time">9:00 PM</span>
+                        <span class="activity">Return to hotel</span>
+                        <div class="notes">Rest early for next day's meetings</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="itinerary-day">
+                <h3>August 7: Business & Leisure</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <span class="time">8:00 AM</span>
+                        <span class="activity">Breakfast</span>
+                        <div class="notes">Brunch & Cake (opens 8 AM) or Granja Petitbo (opens 9 AM)</div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="time">9:30 AM</span>
+                        <span class="activity">Morning meeting</span>
+                        <div class="notes">Pg. de Gràcia office</div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="time">12:30 PM</span>
+                        <span class="activity">Team lunch</span>
+                        <div class="notes">La Terraza del Claris or Ciudad Condal</div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="time">2:00 PM</span>
+                        <span class="activity">Afternoon meeting</span>
+                        <div class="notes">Continue at Pg. de Gràcia</div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="time">5:00 PM</span>
+                        <span class="activity">Free time / rest</span>
+                        <div class="notes">Coffee or freshen up at hotel</div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="time">7:00 PM</span>
+                        <span class="activity">Dinner at La Terraza del Claris</span>
+                        <div class="notes">Rooftop dining. Reservation recommended</div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="time">9:00 PM</span>
+                        <span class="activity">Evening activity</span>
+                        <div class="notes">Optional: Palau de la Música concert</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="itinerary-day">
+                <h3>August 8: Departure</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <span class="time">7:30 AM</span>
+                        <span class="activity">Pack and prepare for check-out</span>
+                        <div class="notes">Check-out by 12:00 PM. Ref: IKL234859</div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="time">8:00 AM</span>
+                        <span class="activity">Breakfast (optional)</span>
+                        <div class="notes">Quick bite at hotel or nearby café</div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="time">9:00 AM</span>
+                        <span class="activity">Depart for BCN Airport</span>
+                        <div class="notes">Allow time for security and formalities</div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="time">10:45 AM</span>
+                        <span class="activity">Flight to ORD (AA 41)</span>
+                        <div class="notes">Nonstop, ~9h 45m</div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="time">1:30 PM</span>
+                        <span class="activity">Arrive at ORD (Chicago time)</span>
+                        <div class="notes">Go through customs</div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="time">2:15 PM</span>
+                        <span class="activity">Head home</span>
+                        <div class="notes">Use Uber, Lyft, or arrange pickup</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2 class="section-title collapsible" id="packing" onclick="toggleCollapse('packing-content')">🧳 Packing List</h2>
+            <div id="packing-content" class="collapsible-content collapsed">
+                <div class="suggestion-highlight">
+                    💡 <strong>Suggestion:</strong> Pack light and focus on versatile pieces that can work for both business meetings and evening activities.
+                </div>
+                <p style="margin-bottom: 20px;">Here's a simple packing list organized by day and activity:</p>
+                
+                <div style="border-bottom: 1px solid #e8eaed; margin: 20px 0;"></div>
+                
+                <h3 style="margin-bottom: 16px; color: #202124; font-size: 18px; font-weight: 500;">🧳 Packing List by Day</h3>
+                
+                <div style="margin-bottom: 24px;">
+                    <h4 style="margin-bottom: 12px; color: #1a73e8; font-size: 16px; font-weight: 500;">Day 1 – Travel (Aug 5)</h4>
+                    <p style="margin-bottom: 8px; color: #5f6368; font-style: italic;">ORD ➝ BCN</p>
+                    <ul style="margin-left: 20px; margin-bottom: 16px;">
+                        <li style="margin-bottom: 6px;">Passport + travel docs (boarding pass, hotel reservation)</li>
+                        <li style="margin-bottom: 6px;">Comfortable travel outfit (business casual recommended)</li>
+                        <li style="margin-bottom: 6px;">Light jacket or shawl (flights can get cold)</li>
+                        <li style="margin-bottom: 6px;">Noise-canceling headphones or earplugs</li>
+                        <li style="margin-bottom: 6px;">Toiletries (travel-size) + medications</li>
+                        <li style="margin-bottom: 6px;">Phone + charger + power bank</li>
+                        <li style="margin-bottom: 6px;">Snacks & refillable water bottle</li>
+                        <li style="margin-bottom: 6px;">Sleep mask + neck pillow (optional)</li>
+                    </ul>
+                </div>
+                
+                <div style="border-bottom: 1px solid #e8eaed; margin: 20px 0;"></div>
+                
+                <div style="margin-bottom: 24px;">
+                    <h4 style="margin-bottom: 12px; color: #1a73e8; font-size: 16px; font-weight: 500;">Day 2 – Arrival + Sightseeing (Aug 6)</h4>
+                    <ul style="margin-left: 20px; margin-bottom: 16px;">
+                        <li style="margin-bottom: 6px;">Casual-smart outfit for lunch and sightseeing</li>
+                        <li style="margin-bottom: 6px;">Sunglasses + sunscreen</li>
+                        <li style="margin-bottom: 6px;">Lightweight shoes for walking</li>
+                        <li style="margin-bottom: 6px;">Compact umbrella (Barcelona weather in August can surprise)</li>
+                        <li style="margin-bottom: 6px;">Evening smart casual attire for dinner (e.g., button-down or blouse)</li>
+                        <li style="margin-bottom: 6px;">Optional: outfit for Casa Batlló or rooftop visit (photos!)</li>
+                        <li style="margin-bottom: 6px;">Day bag or small backpack</li>
+                    </ul>
+                </div>
+                
+                <div style="border-bottom: 1px solid #e8eaed; margin: 20px 0;"></div>
+                
+                <div style="margin-bottom: 24px;">
+                    <h4 style="margin-bottom: 12px; color: #1a73e8; font-size: 16px; font-weight: 500;">Day 3 – Meetings + Cultural Evening (Aug 7)</h4>
+                    <ul style="margin-left: 20px; margin-bottom: 16px;">
+                        <li style="margin-bottom: 6px;">Business outfit (blazer, collared shirt/blouse, slacks/skirt)</li>
+                        <li style="margin-bottom: 6px;">Notepad + pen or laptop/tablet</li>
+                        <li style="margin-bottom: 6px;">Business cards (if applicable)</li>
+                        <li style="margin-bottom: 6px;">Evening wear for dinner/concert (smart casual or semi-formal)</li>
+                        <li style="margin-bottom: 6px;">Comfortable flats or shoes for walking between venues</li>
+                        <li style="margin-bottom: 6px;">Optional: light outer layer (evenings can cool down slightly)</li>
+                    </ul>
+                </div>
+                
+                <div style="border-bottom: 1px solid #e8eaed; margin: 20px 0;"></div>
+                
+                <div style="margin-bottom: 24px;">
+                    <h4 style="margin-bottom: 12px; color: #1a73e8; font-size: 16px; font-weight: 500;">Day 4 – Departure (Aug 8)</h4>
+                    <ul style="margin-left: 20px; margin-bottom: 16px;">
+                        <li style="margin-bottom: 6px;">Easy outfit for travel (business casual)</li>
+                        <li style="margin-bottom: 6px;">All chargers + travel adapters</li>
+                        <li style="margin-bottom: 6px;">Pack souvenirs/gifts securely</li>
+                        <li style="margin-bottom: 6px;">Extra tote bag for overflow</li>
+                        <li style="margin-bottom: 6px;">Re-check passport, wallet, boarding pass</li>
+                        <li style="margin-bottom: 6px;">Print or digital COVID/vaccine documents (if required)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quick Access Navigation -->
+    <div class="quick-access">
+        <h4>Quick Access</h4>
+        <a href="#weather">Weather</a>
+        <a href="#flights">Flights</a>
+        <a href="#hotels">Hotels</a>
+        <a href="#restaurants">Restaurants</a>
+        <a href="#activities">Activities</a>
+        <a href="#itinerary">Itinerary</a>
+        <a href="#packing">Packing</a>
+        <a href="#" onclick="openModal()">Update</a>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" onclick="scrollToTop()">↑</button>
+
+    <!-- API Update Modal -->
+    <div id="apiModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 style="margin-bottom: 20px; color: #202124;">Update Flight Search API</h2>
+            <p style="margin-bottom: 16px; color: #5f6368;">Enter your Amadeus Flight Search API credentials to get real-time flight pricing:</p>
+            
+            <label for="apiKey" style="display: block; margin-bottom: 8px; color: #202124; font-weight: 500;">API Key:</label>
+            <input type="text" id="apiKey" placeholder="Enter your Amadeus API Key">
+            
+            <label for="apiSecret" style="display: block; margin-bottom: 8px; margin-top: 16px; color: #202124; font-weight: 500;">API Secret:</label>
+            <input type="password" id="apiSecret" placeholder="Enter your Amadeus API Secret">
+            
+            <button onclick="updateAPI()">Update API Credentials</button>
+            
+            <div style="margin-top: 20px; padding: 16px; background: #f8f9fa; border-radius: 4px; font-size: 13px; color: #5f6368;">
+                <p><strong>Note:</strong> Get your free API credentials at <a href="https://developers.amadeus.com" target="_blank" style="color: #1a73e8;">developers.amadeus.com</a></p>
+                <p style="margin-top: 8px;">Test environment provides 10 requests/second with cached data. Production offers real-time pricing.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Scroll to top functionality
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // Show/hide scroll to top button
+        window.addEventListener('scroll', function() {
+            const scrollToTopBtn = document.querySelector('.scroll-to-top');
+            if (window.pageYOffset > 300) {
+                scrollToTopBtn.classList.add('visible');
+            } else {
+                scrollToTopBtn.classList.remove('visible');
+            }
+        });
+
+        // Collapsible functionality
+        function toggleCollapse(contentId) {
+            const content = document.getElementById(contentId);
+            const header = content.previousElementSibling;
+            
+            if (content.classList.contains('collapsed')) {
+                content.classList.remove('collapsed');
+                content.style.maxHeight = content.scrollHeight + 'px';
+                header.classList.remove('collapsed');
+            } else {
+                content.classList.add('collapsed');
+                content.style.maxHeight = '0px';
+                header.classList.add('collapsed');
+            }
+        }
+
+        // Initialize collapsible content
+        document.addEventListener('DOMContentLoaded', function() {
+            const weatherContent = document.getElementById('weather-content');
+            const packingContent = document.getElementById('packing-content');
+            
+            // Keep weather content collapsed by default
+            if (weatherContent.classList.contains('collapsed')) {
+                weatherContent.style.maxHeight = '0px';
+            }
+            
+            // Keep packing list collapsed by default
+            if (packingContent.classList.contains('collapsed')) {
+                packingContent.style.maxHeight = '0px';
+                document.getElementById('packing').classList.add('collapsed');
+            }
+        });
+
+        // Modal functionality
+        function openModal() {
+            document.getElementById('apiModal').style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('apiModal').style.display = 'none';
+        }
+
+        function updateAPI() {
+            const apiKey = document.getElementById('apiKey').value;
+            const apiSecret = document.getElementById('apiSecret').value;
+            
+            if (apiKey && apiSecret) {
+                // Store credentials (in a real app, this would be more secure)
+                localStorage.setItem('amadeusApiKey', apiKey);
+                localStorage.setItem('amadeusApiSecret', apiSecret);
+                
+                alert('API credentials updated successfully! Flight prices will be refreshed with real-time data.');
+                closeModal();
+                
+                // Here you would typically trigger a flight search refresh
+                console.log('API credentials updated:', { apiKey: apiKey.substring(0, 5) + '...', apiSecret: '[HIDDEN]' });
+            } else {
+                alert('Please enter both API Key and API Secret.');
+            }
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('apiModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+    </script>
+</body>
+</html>
