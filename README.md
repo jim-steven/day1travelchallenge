@@ -1,4 +1,4 @@
-# Barcelona Business Trip Itinerary
+# Barcelona Business Trip Itinerary - Day 1 Travel Challenge
 
 A comprehensive travel planning website for a business trip to Barcelona, Spain (August 5-8, 2025).
 
